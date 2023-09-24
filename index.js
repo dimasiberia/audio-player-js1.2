@@ -20,7 +20,7 @@ function playAudio() {
     }
 }
 function pauseAudio() {
-    if (!isPlay === false) {
+    if (isPlay === true) {
         playBtn.style.display = 'none';
         pauseBtn.style.display = 'block';
         audio.pause();
