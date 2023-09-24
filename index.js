@@ -1,5 +1,6 @@
 const audio = document.querySelector('audio');
 const playBtn = document.querySelector('.play-btn');
+const pauseBtn = document.querySelector('.pause-btn');
 const playNext = document.querySelector('.next-btn');
 const playPrew = document.querySelector('.prew-btn');
 const timerWrapper = document.querySelector(".timer");
@@ -12,9 +13,16 @@ let listSongs = [`./assets/audio/beyonce.mp3`, `./assets/audio/dontstartnow.mp3`
 function playAudio() {
     audio.src = listSongs[0];
     if (isPlay === false) {
+        playBtn.style.display = 'block';
+        pauseBtn.style.display = 'none';
         audio.play();
         isPlay = true;
-    } else {
+    }
+}
+function pauseAudio() {
+    if (!isPlay === false) {
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
         audio.pause();
         isPlay = false;
     }
@@ -43,6 +51,7 @@ function playPrewSong() {
 }
 
 playBtn.addEventListener('click', playAudio);
+pBtn.addEventListener('click', pauseAudio);
 playNext.addEventListener('click', playNextSong);
 playPrew.addEventListener('click', playPrewSong);
 
@@ -76,6 +85,6 @@ progress.addEventListener("click", (e) => {
 //   }
 
 setInterval(
-    () => document.getElementById('span').innerHTML = Math.floor(audio.currentTime / 60).toString().padStart(2, "0") + ':' + Math.floor(audio.currentTime - Math.floor(audio.currentTime / 60) * 60).toString().padStart(2, "0")+'/'+Math.floor(audio.duration / 60).toString().padStart(2, "0") + ':' + Math.floor(audio.duration - Math.floor(audio.duration / 60) * 60).toString().padStart(2, "0"),
+    () => document.getElementById('span').innerHTML = Math.floor(audio.currentTime / 60).toString().padStart(2, "0") + ':' + Math.floor(audio.currentTime - Math.floor(audio.currentTime / 60) * 60).toString().padStart(2, "0") + '/' + Math.floor(audio.duration / 60).toString().padStart(2, "0") + ':' + Math.floor(audio.duration - Math.floor(audio.duration / 60) * 60).toString().padStart(2, "0"),
     1000
 );

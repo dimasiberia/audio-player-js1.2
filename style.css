@@ -1,34 +1,44 @@
 .play-btn {
-    background: url(./assets/svg/play.png) no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 100px;
+  background: url(./assets/svg/play.png) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
 
+}
+.pause-btn{
+  background: url(./assets/svg/pause.png) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
 }
 
 .next-btn {
-    background-image: url(./assets/svg/forward.png);
-    width: auto;
-    height: auto;
+  background-image: url(./assets/svg/forward.png);
+  background-size: contain;
+  width: 50px;
+  height: 50px;
 }
 
 .prew-btn {
-    background-image: url(./assets/svg/backward.png);
-    width: auto;
-    height: auto;
+  background-image: url(./assets/svg/backward.png);
+  background-size: contain;
+  width: 50px;
+  height: 50px;
 }
 
 progress {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 
 }
-::-webkit-progress-bar {
-    background-color: black;
-  }
-::-webkit-progress-value {
-    background-color: rgb(196, 114, 199);
-  }
-  li{
-    list-style: none;
-  }
 
+::-webkit-progress-bar {
+  background-color: black;
+}
+
+::-webkit-progress-value {
+  background-color: rgb(196, 114, 199);
+}
+
+li {
+  list-style: none;
+}
