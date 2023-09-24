@@ -1,0 +1,34 @@
+.play-btn {
+    background: url(./assets/svg/play.png) no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+
+}
+
+.next-btn {
+    background-image: url(./assets/svg/forward.png);
+    width: auto;
+    height: auto;
+}
+
+.prew-btn {
+    background-image: url(./assets/svg/backward.png);
+    width: auto;
+    height: auto;
+}
+
+progress {
+    -webkit-appearance: none;
+
+}
+::-webkit-progress-bar {
+    background-color: black;
+  }
+::-webkit-progress-value {
+    background-color: rgb(196, 114, 199);
+  }
+  li{
+    list-style: none;
+  }
+
