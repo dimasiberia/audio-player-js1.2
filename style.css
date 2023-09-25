@@ -125,6 +125,9 @@ img{
   height: 50px;
   width: 100px;
 }
+ button:hover{
+  cursor: pointer;
+ }
 body{
   background-color: rgb(176, 176, 176);
 }
