@@ -21,6 +21,7 @@ button {
   position: absolute;
   right: 175px;
   top: 75px;
+  opacity: 1;
 }
 
 .pause-btn {
@@ -32,6 +33,7 @@ button {
   position: absolute;
   right: 175px;
   top: 75px;
+  opacity: 1;
 }
 
 .next-btn {
