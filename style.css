@@ -90,6 +90,10 @@ progress {
   background-color: black;
 
 }
+::-webkit-progress-bar:hover {
+  cursor: pointer;
+
+}
 
 ::-webkit-progress-value {
   background-color: rgb(162, 176, 82);
