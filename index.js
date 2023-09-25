@@ -11,9 +11,9 @@ const songName = document.querySelector('.songname');
 const songIcon = document.querySelector('.iconSong');
 let isPlay = false;
 let playNum = 0;
-let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Butyrka.mp3`,]
-let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `bytyrka - zapakhlo vesnoi`]
-let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/butyrka.png`]
+let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Butyrka.mp3`, `./assets/audio/Masha_i_medvedi_-_Zemlya_\(musmore.com\).mp3`, `./assets/audio/Zemfira_-_Iskala_\(musmore.com\).mp3`, `./assets/audio/Sergejj_SHnurov_Kipelov_-_Svoboda_\(musmore.com\).mp3`]
+let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `bytyrka - zapakhlo vesnoi`, `masha i medvedi - zemlya`, `zemfira - iskala`, `shnurov - svoboda`]
+let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/butyrka.png`, `./assets/image/pngwing.com-2.png`, `./assets/image/zemfira.jpg.png`, `./assets/image/pngegg-2.png`]
 
 function playAudio() {
     if (isPlay === false) {
@@ -71,8 +71,69 @@ function playPrewSong() {
         pauseBtn.style.display = 'inline';
     }
 }
+function play1Audio() {
+    audio.src = listSongs[0]
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    audio.play();
+    isPlay = true;
+    songName.innerHTML = listNameSongs[0]
+    songIcon.style.backgroundImage = `url('${listIcons[0]}')`;
+}
+function play2Audio() {
+    audio.src = listSongs[1]
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    audio.play();
+    isPlay = true;
+    songName.innerHTML = listNameSongs[1]
+    songIcon.style.backgroundImage = `url('${listIcons[1]}')`;
+}
+function play3Audio() {
+    audio.src = listSongs[2]
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    audio.play();
+    isPlay = true;
+    songName.innerHTML = listNameSongs[2]
+    songIcon.style.backgroundImage = `url('${listIcons[2]}')`;
+}
+function play4Audio() {
+    audio.src = listSongs[3]
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
+        audio.play();
+        isPlay = true;
+        songName.innerHTML = listNameSongs[3]
+        songIcon.style.backgroundImage = `url('${listIcons[3]}')`;
+    
+}
+function play5Audio() {
+    audio.src = listSongs[4]
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    audio.play();
+    isPlay = true;
+    songName.innerHTML = listNameSongs[4]
+    songIcon.style.backgroundImage = `url('${listIcons[4]}')`;
+}
+function play6Audio() {
+    audio.src = listSongs[5]
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline';
+    audio.play();
+    isPlay = true;
+    songName.innerHTML = listNameSongs[5]
+    songIcon.style.backgroundImage = `url('${listIcons[5]}')`;
+}
 
 playBtn.addEventListener('click', playAudio);
+document.querySelector('.track1').addEventListener('click',play1Audio)
+document.querySelector('.track2').addEventListener('click',play2Audio)
+document.querySelector('.track3').addEventListener('click',play3Audio)
+document.querySelector('.track4').addEventListener('click',play4Audio)
+document.querySelector('.track5').addEventListener('click',play5Audio)
+document.querySelector('.track6').addEventListener('click',play6Audio)
 pauseBtn.addEventListener('click', playAudio);
 playNext.addEventListener('click', playNextSong);
 playPrew.addEventListener('click', playPrewSong);

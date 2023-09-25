@@ -1,4 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/ds-digital');
+body{
+  background-color: rgb(176, 176, 176);
+}
 
 button {
   color: inherit;
@@ -7,6 +10,7 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  opacity: 0;
 }
 
 .play-btn {
@@ -32,19 +36,19 @@ button {
 
 .next-btn {
   background-color: inherit;
-  width: 50px;
+  width: 120px;
   height: 50px;
   position: absolute;
-  left: 100px;
+  left: 65px;
   top: 200px;
 }
 
 .prew-btn {
   background-color: inherit;
-  width: 50px;
+  width: 120px;
   height: 50px;
   position: absolute;
-  left: 100px;
+  left: 65px;
   top: 250px;
 }
 
@@ -127,7 +131,48 @@ img{
 }
  button:hover{
   cursor: pointer;
+  
  }
-body{
-  background-color: rgb(176, 176, 176);
+
+.track1{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 200px;
+}
+.track2{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 280px;
+}
+.track3{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 363px;
+}
+.track4{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 447px;
+}
+.track5{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 535px;
+}
+.track6{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 620px;
 }
