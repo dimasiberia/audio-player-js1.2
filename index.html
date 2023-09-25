@@ -9,20 +9,29 @@
 </head>
 
 <body>
-    <audio ></audio>
-    <button class="prew-btn"></button>
-    <button class="play-btn"></button>
-    <button class="pause-btn"></button>
-    <button class="next-btn"></button>
-    <li class="progress">
-        <progress id="progress" value="0" min="0">
-            <span id="progress-bar"></span>
-        </progress>
-    </li>
-    <div class="timer">
-        <div></div>
-        <span aria-label="timer" id="span">00:00/00:00</span>
-      </div>
+    <div class="player">
+        <audio src="./assets/audio/kino-spokoynaya-noch.mp3"></audio>
+        <button class="prew-btn"></button>
+        <button class="play-btn"></button>
+        <button class="pause-btn"></button>
+        <button class="next-btn"></button>
+        <li class="progress">
+            <progress id="progress" value="0" min="0">
+                <span id="progress-bar"></span>
+            </progress>
+        </li>
+        <div class="timer">
+            <span aria-label="timer" id="span">00:00/00:00</span>
+        </div>
+        <span class="songname">kino - spokoinaya noch'</span>
+        <div class="iconSong"></div>
+    </div>
+    <div class="footer">
+        <a href="https://rs.school/js-stage0/"><img src="./assets/svg/rs_school_js.svg" alt="RSSCHOOL"></a>
+        <p>2023</p>
+        <a href="https://github.com/dimasiberia">dimasiberia</a>
+    </div>
 </body>
+
 </html>
 <script src="./index.js"></script>

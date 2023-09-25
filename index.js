@@ -6,23 +6,24 @@ const playPrew = document.querySelector('.prew-btn');
 const timerWrapper = document.querySelector(".timer");
 const timer = document.querySelector(".timer span");
 const timerBar = document.querySelector(".timer div");
+const playerImage = document.querySelector(".player");
+const songName = document.querySelector('.songname');
+const songIcon = document.querySelector('.iconSong');
 let isPlay = false;
 let playNum = 0;
-let listSongs = [`./assets/audio/beyonce.mp3`, `./assets/audio/dontstartnow.mp3`]
+let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Бутырка\ -\ Запахло\ Весной.mp3`,]
+let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `bytyrka - zapakhlo vesnoi`]
+let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/butyrka.png`]
 
 function playAudio() {
-    audio.src = listSongs[0];
     if (isPlay === false) {
-        playBtn.style.display = 'block';
-        pauseBtn.style.display = 'none';
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
         audio.play();
         isPlay = true;
-    }
-}
-function pauseAudio() {
-    if (isPlay === true) {
-        playBtn.style.display = 'none';
-        pauseBtn.style.display = 'block';
+    } else {
+        playBtn.style.display = 'inline';
+        pauseBtn.style.display = 'none';
         audio.pause();
         isPlay = false;
     }
@@ -31,11 +32,22 @@ function playNextSong() {
     playNum += 1;
     if (playNum > listSongs.length - 1) {
         audio.src = listSongs[0]
+        songName.innerHTML = listNameSongs[0];
         audio.play();
         playNum = 0;
+        isPlay = true;
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
+        songIcon.style.backgroundImage = `url('${listIcons[0]}')`;
+
     } else {
         audio.src = listSongs[playNum]
+        songIcon.style.backgroundImage = `url('${listIcons[playNum]}')`;
+        songName.innerHTML = listNameSongs[playNum];
         audio.play();
+        isPlay = true;
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
     }
 }
 function playPrewSong() {
@@ -44,20 +56,29 @@ function playPrewSong() {
         audio.src = listSongs[listSongs.length - 1]
         audio.play();
         playNum = listSongs.length - 1;
+        songName.innerHTML = listNameSongs[listNameSongs.length - 1]
+        isPlay = true;
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
+        songIcon.style.backgroundImage = `url('${listIcons[listNameSongs.length - 1]}')`;
     } else {
         audio.src = listSongs[playNum]
         audio.play();
+        songName.innerHTML = listNameSongs[playNum]
+        songIcon.style.backgroundImage = `url('${listIcons[playNum]}')`;
+        isPlay = true;
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline';
     }
 }
 
 playBtn.addEventListener('click', playAudio);
-pBtn.addEventListener('click', pauseAudio);
+pauseBtn.addEventListener('click', playAudio);
 playNext.addEventListener('click', playNextSong);
 playPrew.addEventListener('click', playPrewSong);
 
 audio.addEventListener("timeupdate", () => {
-    if (!progress.getAttribute("max"))
-        progress.setAttribute("max", audio.duration);
+    progress.setAttribute("max", audio.duration);
     progress.value = audio.currentTime;
     progressBar.style.width = `${Math.floor(
         (audio.currentTime * 100) / audio.duration,
