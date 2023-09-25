@@ -11,7 +11,7 @@ const songName = document.querySelector('.songname');
 const songIcon = document.querySelector('.iconSong');
 let isPlay = false;
 let playNum = 0;
-let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Butyrka_-_Zapakhlo_vesnojj_\(musmore.com\).mp3`,]
+let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Butyrka.mp3`,]
 let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `bytyrka - zapakhlo vesnoi`]
 let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/butyrka.png`]
 
