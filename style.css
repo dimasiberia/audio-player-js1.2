@@ -101,7 +101,7 @@ li {
 }
 
 .player {
-  background-image: url(./assets/image/audioplayer.jpg);
+  background-image: url(./assets/image/audioplayer.png);
   width: 1000px;
   height: 500px;
   margin: 50px auto;
@@ -120,4 +120,7 @@ li {
 img{
   height: 50px;
   width: 100px;
+}
+body{
+  background-color: grey;
 }
