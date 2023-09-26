@@ -11,9 +11,9 @@ const songName = document.querySelector('.songname');
 const songIcon = document.querySelector('.iconSong');
 let isPlay = false;
 let playNum = 0;
-let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Butyrka.mp3`, `./assets/audio/Masha_i_medvedi_-_Zemlya_\(musmore.com\).mp3`, `./assets/audio/Zemfira_-_Iskala_\(musmore.com\).mp3`, `./assets/audio/Sergejj_SHnurov_Kipelov_-_Svoboda_\(musmore.com\).mp3`]
-let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `bytyrka - zapakhlo vesnoi`, `masha i medvedi - zemlya`, `zemfira - iskala`, `shnurov - svoboda`]
-let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/butyrka.png`, `./assets/image/pngwing.com-2.png`, `./assets/image/zemfira.jpg.png`, `./assets/image/pngegg-2.png`]
+let listSongs = [`./assets/audio/kino-spokoynaya-noch.mp3`, `./assets/audio/mixail_krug_devochka_pay.mp3`, `./assets/audio/Михаил\ Круг\ -\ Магадан.mp3`, `./assets/audio/Masha_i_medvedi_-_Zemlya_\(musmore.com\).mp3`, `./assets/audio/Zemfira_-_Iskala_\(musmore.com\).mp3`, `./assets/audio/KREC\ -\ Нежность.mp3`]
+let listNameSongs = [`kino - spokoinaya noch'`, `mikhail krug - devochka pay`, `mikhail krug - magadan`, `masha i medvedi - zemlya`, `zemfira - iskala`, `krec - nezhnost'`]
+let listIcons = [`./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png`, `./assets/image/pngwing.com.png`, `./assets/image/free-icon-railroad-2539441.png`, `./assets/image/pngwing.com-2.png`, `./assets/image/zemfira.jpg.png`, `./assets/image/finger.png`]
 
 function playAudio() {
     if (isPlay === false) {
