@@ -1,44 +1,180 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+body{
+  background-color: rgb(176, 176, 176);
+}
+
+button {
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  opacity: 0;
+}
+
 .play-btn {
   background: url(./assets/svg/play.png) no-repeat;
   background-size: contain;
   width: 50px;
   height: 50px;
-
+  position: absolute;
+  right: 175px;
+  top: 75px;
+  opacity: 1;
 }
-.pause-btn{
+
+.pause-btn {
   background: url(./assets/svg/pause.png) no-repeat;
   background-size: contain;
   width: 50px;
   height: 50px;
+  display: none;
+  position: absolute;
+  right: 175px;
+  top: 75px;
+  opacity: 1;
 }
 
 .next-btn {
-  background-image: url(./assets/svg/forward.png);
-  background-size: contain;
-  width: 50px;
+  background-color: inherit;
+  width: 120px;
   height: 50px;
+  position: absolute;
+  left: 65px;
+  top: 200px;
 }
 
 .prew-btn {
-  background-image: url(./assets/svg/backward.png);
-  background-size: contain;
-  width: 50px;
+  background-color: inherit;
+  width: 120px;
   height: 50px;
+  position: absolute;
+  left: 65px;
+  top: 250px;
 }
 
 progress {
   -webkit-appearance: none;
+  position: absolute;
+  left: 215px;
+  top: 113px;
+  width: 470px;
+  height: 5px;
+}
+
+.timer {
+  position: absolute;
+  right: 350px;
+  top: 250px;
+  font-family: 'DS-Digital', sans-serif;
+  font-size: 30px;
+
+}
+
+.songname {
+  position: absolute;
+  right: 350px;
+  top: 220px;
+  font-family: 'DS-Digital', sans-serif;
+  font-size: 30px;
+}
+
+.iconSong {
+  background-image: url(./assets/image/pngimg.com\ -\ viktor_tsoi_PNG6.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 220px;
+  left: 210px
 
 }
 
 ::-webkit-progress-bar {
   background-color: black;
+
+}
+::-webkit-progress-bar:hover {
+  cursor: pointer;
+
 }
 
 ::-webkit-progress-value {
-  background-color: rgb(196, 114, 199);
+  background-color: rgb(162, 176, 82);
+
 }
 
 li {
   list-style: none;
+}
+
+.player {
+  background-image: url(./assets/image/audioplayer.png);
+  width: 1000px;
+  height: 500px;
+  margin: 50px auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+.footer {
+  display: flex;
+  justify-content:space-around ;
+  font-family: 'DS-Digital', sans-serif;
+  align-items: center;
+  
+}
+img{
+  height: 50px;
+  width: 100px;
+}
+ button:hover{
+  cursor: pointer;
+  
+ }
+
+.track1{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 200px;
+}
+.track2{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 280px;
+}
+.track3{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 363px;
+}
+.track4{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 447px;
+}
+.track5{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 535px;
+}
+.track6{
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  bottom: 150px;
+  left: 620px;
 }
